@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style2.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+
+        <div id="heading">
+            <a style="text-decoration: none;" href="/profile"><h1 style="color: #0a58ca;">Question Tracker</h1></a>
+        </div>
+        <div id="sub_heading">
+            <h1><%= category %></h1> </h1>
+        </div>
+        <div id="search_line">
+            <a style="text-decoration: none;" href="/random-question"><div id="pick_random">
+                <h1 style="cursor: pointer;">Pick Random </h1>
+            </div></a>
+            
+            <form action="/search" method="post">
+                <input id="search_box" name="q" type="text" placeholder=" Search Question..  ">
+                <button id="search-button">Search</button>
+              </form>
+            <!-- <div id="status">
+                <h3 style="cursor: pointer;"> sort</h1>
+            </div> -->
+            <!-- <div id="bookmark"> 🗃 </div> -->
+        </div>
+        <div id="Questions_table">
+            <table id="table">
+                <tr id="heading_row">
+                    <th id="Questions">Questions</th>
+                    <th id="links">Links</th>
+                    <th id="bookmark_note">Bookmark add Note</th>
+                    <th>DELETE</th>
+                </tr>
+                <% data.forEach(function(elem){ %>
+                <tr>
+                    <td style="cursor: pointer;"><%= elem.question %></td>
+                    <td style="cursor: pointer;">
+                        <a style="text-decoration: none; color:black;" href="<%= elem.link %>">Click Me</a>
+                      </td>   
+                    <td style="cursor: pointer;color: black;">🗃 📝<%= elem.notes %> </td>
+                    <td ><a style="text-decoration: none;" href="/delete/<%= elem.id %>"><button style="padding: 2px 10px 2px 10px;margin-left:1vw;cursor: pointer;">delete</button></a></td>
+             </tr>
+             <% }) %>
+            </table>
+        </div >
+        
+    </div>
+
+   
+</body>
+</html>

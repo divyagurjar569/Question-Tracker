@@ -1,0 +1,119 @@
+<!-- random-question.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Question</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #random-question {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: slideIn 0.5s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); }
+            to { transform: translateY(0); }
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin: 0;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .header i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+        .question-container {
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .question-container p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #555;
+        }
+        .question-container strong {
+            color: #333;
+        }
+        .back-btn {
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .back-btn:hover {
+            background-color: #e0e0e0;
+        }
+        .back-btn i {
+            margin-right: 5px;
+        }
+        .link-container {
+            margin-top: 20px;
+        }
+        .link-container a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+        .link-container a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="random-question">
+        <div class="header">
+            <i class="fas fa-question-circle"></i>
+            <h1>Question Tracker</h1>
+        </div>
+        <div class="question-container">
+            <p><strong>Question:</strong> <%= randomQuestion.question %></p>
+            <p><strong>Category:</strong> <%= randomQuestion.category %></p>
+            <% if (randomQuestion.notes) { %>
+            <p><strong>Notes:</strong> <%= randomQuestion.notes %></p>
+            <% } %>
+            <% if (randomQuestion.link) { %>
+            <div class="link-container">
+                <strong>Link:</strong> <a href="<%= randomQuestion.link %>" target="_blank"><%= randomQuestion.link %></a>
+            </div>
+            <% } %>
+            <!-- Add additional fields as needed -->
+        </div>
+        <a href="/profile" class="back-btn"><i class="fas fa-arrow-left"></i> Go Back</a>
+    </div>
+</body>
+</html>

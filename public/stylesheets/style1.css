@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden ;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-top: 5vh;
+
+}
+#head{
+    position: relative;
+    position: absolute;
+    color: #0a58ca;
+    font-weight: 106px;
+    height: 8vh;
+    width: 70vw;
+    left: 30vw;
+    top: 1vh;
+    letter-spacing: 3px;
+}
+#txt1{
+    margin-left: 55.5vw;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: gilroy;
+    transform: translate(-50%,-50%);
+}
+#txt2{
+    margin-top: -3vh;
+    margin-left:37vw;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: -1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#txt3{
+    margin-left: 28vw;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 2vh;
+    font-size: 25px;
+    font-family: gilroy;
+}
+#progress-bar{
+    margin-left: 20vw;
+    width: 60vw;
+    height: 1.5vh;
+    margin-top: 1vh;
+}
+#box-1{
+    position: relative;
+    width: 70vw;
+    border-radius: 5vh;
+    height: 7vh;
+    background-color:orangered;
+    margin-left: 14.1vw;
+    margin-top: 2vh;
+    padding: 10px;
+}
+#txt4{
+    font-size: 20px;
+    color: white;
+    font-family: gilroy;
+    font-weight: 600;
+    margin-left: 10px;
+}
+#start{
+    position: absolute;
+    left: 63vw;
+    top: 1.5vh;
+    width: 6vw;
+    height: 4vh;
+    font-size: 15px;
+    font-family: gilroy;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    color:black;
+    background-color: white;
+}
+#box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21vw, 1fr));
+    gap: 10px;
+    height: 55vh;
+    margin-top: 1vh;
+    width: 71vw;
+    margin-left: 28vh;
+    overflow-y: scroll;
+    padding: 10px;
+  }
+  .bx1 {
+    border-radius: 20px;
+    height: 25vh;
+    background-color: lightblue;
+    padding: 15px;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    color:black;
+    font-family: gilroy;
+    text-transform:capitalize;
+    
+  }
+  #upl{
+    position: absolute;
+    top: 5vh;
+    left: 90vw;
+    background-color: lightblue;
+    border-radius: 5%;
+    padding:5px 20px 5px 20px;
+    
+  }
+  
+
+#q1{
+    margin-top: 7px;
+    margin-left: 10px;
+ font-size: 25px;
+ font-family: gilroy;
+ font-weight: 600;
+
+}
+#q2{
+    position: absolute;
+    top: 3.7vh;
+    left: 10vw;
+    width: 9vw;
+    height: 4vh;
+    font-size: 15px;
+    font-family: gilroy;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 50px;
+    color:white;
+    background-color:limegreen;
+}
+#q3{
+  font-size: 15px;
+  margin-left: 0.7vw;
+  font-family: gilroy;
+  margin-top: 2vh;
+  word-spacing: 7px;
+}
+#q4{
+    font-size: 14px;
+    margin-left: 0.7vw;
+    font-family: gilroy;
+    font-weight: 600;
+    margin-top: -1vh;
+}
+#q5{
+    font-size: 15px;
+    margin-left: 0.7vw;
+    font-family: gilroy;
+    margin-top: 2vh;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+#progress-bar-1{
+    width: 38vh;
+    height: 1.7vh;
+    margin-left: 1vh;
+    color: black;
+}
+#aakhri{
+    background-color: rgba(0, 128, 0, 0.571);
+    width: 100vw;
+    height: 6vh;
+    position: absolute;
+    bottom: 0%;
+    padding: 6px;
+}
+#star{
+    margin-left: 2vw;
+    border-radius: 50px;
+    padding: 3px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.966);
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: gilroy;
+    word-spacing: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#star2{
+    border-radius: 50px;
+    padding: 3px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.966);
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: gilroy;
+    margin-left: 75vw;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#star3{
+    border-radius: 50px;
+    padding: 3px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.966);
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: gilroy;
+    position: absolute;
+    left: 92vw;
+    margin-top: 0.6vh;
+    word-spacing: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#bx1:hover {
+    z-index: 999;
+    scale: 1.06;
+    opacity: 0.9;
+}
+
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload-Question</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #3494e6, #ec6ead); /* Updated gradient background */
+            color: #ffffff;
+        }
+
+        #form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input, button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            transition: background-color 0.3s ease; /* Smooth transition for color changes */
+        }
+
+        input {
+            background-color: rgba(255, 255, 255, 0.8); /* Updated input background color with transparency */
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #e44d26; /* Updated button background color */
+            color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added button box shadow */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.lettering.min.js"></script>
+</head>
+<body>
+
+    <div id="form-container" class="animate__animated animate__fadeIn">
+        <a style="text-decoration: none;" href="/profile"><h1 style="text-align: center; color: #ffffff;">Question Tracker</h1></a>
+        <form id="myForm" method="post" action="/done" >
+            <label for="category" class="textillate">Category:</label>
+            <input type="text" id="category" name="category" class="animate__animated animate__fadeInLeft" oninput="this.value = this.value.toUpperCase();">
+            
+            <label for="question" class="textillate">Question:</label>
+            <input type="text" id="question" name="question" class="animate__animated animate__fadeInLeft">
+
+            <label for="link" class="textillate">Link:</label>
+            <input type="text" id="link" name="link" class="animate__animated animate__fadeInLeft">
+
+            <label for="notes" class="textillate">Notes:</label>
+            <input type="text" id="notes" name="notes" class="animate__animated animate__fadeInLeft">
+
+            <button id="submitBtn" class="animate__animated animate__fadeInUp">Save</button>
+        </form>
+        <a href="/profile" style="display: inline-block; overflow: hidden; text-decoration: none;">
+            <button style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 8px;">
+              Go Back
+            </button>
+          </a>
+          
+    </div>
+
+    <script>
+        gsap.from("#form-container", { duration: 1, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".animate__fadeInLeft", { duration: 1, opacity: 0, x: -50, stagger: 0.2, ease: "power2.out" });
+        gsap.from("#submitBtn", { duration: 1, opacity: 0, y: 50, ease: "power2.out", delay: 0.5 });
+
+        // Textillate.js settings
+        $(".textillate").textillate({
+            in: { effect: "fadeInUp", shuffle: true },
+            out: { effect: "fadeOutDown", shuffle: true },
+        });
+
+        // Add your form submission logic here
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Add your form submission logic here
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/done">
+        <input type="text" name="category" id="" placeholder="category">
+        <input type="text" name="question" id="" placeholder="question">
+        <input type="text" name="link" id="" placeholder="link">
+        <input type="text" name="notes" id="" placeholder="notes">
+        <button>save</button>
+    </form>
+</body>
+</html> -->

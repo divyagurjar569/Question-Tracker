@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-Uploader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            margin: 10px 0;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <% if (error!="null") { %>
+            <div style="color: black;font-size:medium;" class="alert alert-danger" role="alert">
+              <%= error %>
+              <h1>Question not saved!</h1>
+            </div>
+          <% }else{ %>
+          
+        <h1>Data Saved Successfully</h1>
+        <div>
+            <p>Category: <%= data.category %></p>
+            <p>Question: <%= data.question %></p>
+            <p>Notes: <%= data.notes %></p>
+            <p>Link: <a href="<%= data.link %>"><%= data.link %></a></p>
+        </div>
+        <% } %>
+        <a href="/admin">Go back to form</a>
+    </div>
+</body>
+</html>

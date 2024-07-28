@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About This Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 35px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #5c67a3;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #777;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        footer p {
+            color: #777;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #5c67a3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #445182;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <header>
+            <h1>Question Tracker</h1>
+            <h2>About This Project</h2>
+            <p>Your ultimate solution for tracking and managing your coding questions</p>
+        </header>
+        <section>
+            <h2>Project Overview</h2>
+            <p>This project is designed to help developers and coding enthusiasts keep track of their coding questions, upload new questions, make notes, and save useful links.</p>
+            <p>Whether you are preparing for coding interviews, practicing problems, or simply keeping a record of interesting challenges, this project aims to be your go-to tool.</p>
+        </section>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Upload and track coding questions</li>
+                <li>Add detailed notes for each question</li>
+                <li>Save and manage useful links</li>
+                <li>Search through your questions with ease</li>
+                <li>Secure and user-friendly interface</li>
+            </ul>
+        </section>
+        <section>
+            <h2>How to Use</h2>
+            <p>Getting started is easy:</p>
+            <ol style="">
+                <li>Sign up or log in to your account</li>
+                <li>Navigate to the 'Upload a Question' section</li>
+                <li>Fill in the details of your question, add notes, and provide a link if available</li>
+                <li>Submit the form to add the question to your collection</li>
+                <li>Use the search functionality to find and review your questions anytime</li>
+            </ol>
+        </section>
+        <a href="/profile"><button class="back-btn"><i class="fas fa-chevron-left"></i> Back to Profile</button></a>
+        <footer>
+            <p>&copy; 2024 Project Tracker. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
